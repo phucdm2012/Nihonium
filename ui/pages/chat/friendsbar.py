@@ -5,9 +5,16 @@ from qfluentwidgets_pro.window.fluent_window import *
 from qfluentwidgets_pro.components.widgets.scroll_area import *
 from qfluentwidgets_pro.components.widgets.card_widget import *
 from typing import List
+import os
+from pathlib import Path
+
+CURRENT_PATH = Path(__file__)
+RESOUCE_PATH = CURRENT_PATH.parent / "resouces"
 
 
 class FriendsBar(CardWidget):
+    burFilterPath = RESOUCE_PATH / "blur.svg"
+
     def __init__(self, friends: List[dict], parent=None):
         super().__init__(parent)
         self.initFriendsBar()
@@ -30,6 +37,8 @@ class FriendsBar(CardWidget):
         self.friendsSearchWidget.setSizePolicy(
             QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed
         )
+
+        self.friendsSearchWidget.setBack
 
     def createFriendsList(self):
         ...
