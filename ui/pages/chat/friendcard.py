@@ -2,6 +2,10 @@ from qfluentwidgets_pro import *
 from PySide6.QtWidgets import *
 from PySide6.QtGui import *
 
+from qfluentwidgets_pro.components.widgets.card_widget import CardWidget
+from qfluentwidgets_pro.components.widgets.label import ImageLabel, SubtitleLabel, TitleLabel
+from qfluentwidgets_pro.components.widgets.skeleton import CirclePersonalInfoSkeleton, SkeletonWidget
+
 
 class FriendCard(CardWidget):
     def __init__(self, parent = None, avatar: QPixmap = None, name: str = None, recentMessage: str = None):
